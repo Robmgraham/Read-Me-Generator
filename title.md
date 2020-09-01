@@ -1,1 +1,0 @@
-![NPM License](https://img.shields.io/npm/l/MIT)

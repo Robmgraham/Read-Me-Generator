@@ -17,14 +17,37 @@ inquirer.prompt(question).then(answersJSON => {
 });
 
 function generateReadME(answers) {
-    // `## Title
-    //      ${answers.title}`
-    //     ` \n
-    //     ## Description \n
-    //     ${answers.description}`
-    return (
-        `![NPM License](https://img.shields.io/npm/l/${answers.license})`
 
+    return (
+        `![NPM License](https://img.shields.io/npm/l/${answers.license})
+## Title
+        ${answers.title}
+            
+## Description 
+        ${answers.description}
+
+## Table of Contents
+        ${answers.table}
+
+## Install
+        ${answers.install}
+
+## Usage
+        ${answers.usage}
+
+## License
+        ${answers.license}
+
+## Contributers
+        ${answers.contributing}
+
+## Test
+        ${answers.tests}
+
+## Email for questions regarding the project
+        ${answers.email}
+
+`
 
     )
 }
@@ -50,7 +73,7 @@ function answers() {
         },
         {
             type: "input",
-            message: " what is required for Installation:",
+            message: "What is required for Installation?",
             name: "install"
         },
         {
@@ -60,7 +83,7 @@ function answers() {
         },
         {
             type: "list",
-            message: "License for the Project",
+            message: "License for the Project:",
             choices: ["BSD", "MIT", "GPL"],
             name: "license"
 
@@ -72,13 +95,14 @@ function answers() {
         },
         {
             type: "input",
-            message: "Tests",
+            message: "Tests:",
             name: "tests",
         },
         {
             type: "input",
             message: "Enter your Email for user questions regarding this project:",
-            name: "For questions in regards to this project email me at:"
+            name: "email"
+
 
 
         }
