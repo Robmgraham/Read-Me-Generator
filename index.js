@@ -2,7 +2,7 @@ var inquirer = require("inquirer");
 var fs = require('fs');
 var question = answers();
 const answersJSON = JSON.stringify(answers, null, 2);
-// JSON.stringify(answersJSON, undefined, 2)
+
 inquirer.prompt(question).then(answersJSON => {
     var theTitle = answersJSON.title
 
@@ -52,8 +52,6 @@ function generateReadME(answers) {
     )
 }
 
-
-
 function answers() {
     return [{
 
@@ -90,7 +88,7 @@ function answers() {
         },
         {
             type: "input",
-            message: "Contributing members of the Project:",
+            message: "Github profile names of members that contributed to the Project:",
             name: "contributing",
         },
         {
