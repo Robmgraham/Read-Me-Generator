@@ -46,6 +46,7 @@ function generateReadME(answers) {
 
 ## Email for questions regarding the project
         ${answers.email}
+        ${"github.com" + answers.contributing }
 
 `
 
