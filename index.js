@@ -43,10 +43,11 @@ function generateReadME(answers) {
 
 ## Test
         ${answers.tests}
+        
 
 ## Email for questions regarding the project
         ${answers.email}
-        ${"github.com" + answers.contributing }
+        ${"github.com/" + answers.contributing }
 
 `
 
